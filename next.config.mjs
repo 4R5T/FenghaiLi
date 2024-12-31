@@ -3,6 +3,7 @@
 const nextConfig = {
     basePath : '/myweb',
     output : 'export',
+    assetPrefix: './', 
     distDir : 'dist',
     images : {
         unoptimized :true,

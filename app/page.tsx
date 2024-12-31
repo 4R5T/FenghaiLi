@@ -67,7 +67,7 @@ export default function Home() {
                 </span>
               </AnimatedGradientText>
             </a>
-            <a href="/myweb/files/Resume_Fenghai_Li_Nov_20.pdf">
+            {/* <a href="/myweb/files/Resume_Fenghai_Li_Nov_20.pdf">
               <AnimatedGradientText>
                 <span
                   className={cn(
@@ -77,9 +77,9 @@ export default function Home() {
                   CV
                 </span>
               </AnimatedGradientText>
-            </a>
+            </a> */}
 
-            <a href="dist/myweb/files/Resume_Fenghai_Li_Nov_20.pdf">
+            <a href="/myweb/files/Resume_Fenghai_Li_Nov_20.pdf">
               <AnimatedGradientText>
                 <span
                   className={cn(
