@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 import MeteorBox from "@/components/ui/mine/meteorBox"
 export default function Home() {
