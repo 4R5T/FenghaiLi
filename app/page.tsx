@@ -67,7 +67,7 @@ export default function Home() {
                 </span>
               </AnimatedGradientText>
             </a>
-            <a href="/Resume_Fenghai_Li_Nov_20.pdf">
+            <a href="/files/Resume_Fenghai_Li_Nov_20.pdf">
               <AnimatedGradientText>
                 <span
                   className={cn(
