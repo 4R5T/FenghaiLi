@@ -1,9 +1,9 @@
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'myweb'; 
+const useCustomDomain = process.env.USE_CUSTOM_DOMAIN === 'true';
 
 const nextConfig = {
-  basePath: `/${repoName}`, 
-  assetPrefix: isProd ? `/${repoName}/` : undefined,
+  basePath: useCustomDomain ? '' : '/myweb',
+  assetPrefix: isProd && !useCustomDomain ? '/myweb/' : undefined,
   output: 'export',
   distDir: 'dist',
   images: {
