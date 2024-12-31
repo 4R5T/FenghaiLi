@@ -1,9 +1,8 @@
 const isProd = process.env.NODE_ENV === 'production';
-const useCustomDomain = process.env.USE_CUSTOM_DOMAIN === 'true';
 
 const nextConfig = {
-  basePath: useCustomDomain ? '' : '/myweb',
-  assetPrefix: isProd && !useCustomDomain ? '/myweb/' : undefined,
+  basePath: isProd ? '' : '/myweb',
+  assetPrefix: isProd ? undefined : '/myweb/',
   output: 'export',
   distDir: 'dist',
   images: {
