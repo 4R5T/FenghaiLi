@@ -27,10 +27,10 @@ export default function Home() {
                 >
                   <Image
                     src="/icons/gitIcon.svg"
-                    alt="GitHub"
+                    alt=" "
                     width={20}
                     height={20}
-                    className="mr-2" // Adjust spacing as needed
+                    className="mr-2"
                   />
                   Github
                 </span>
