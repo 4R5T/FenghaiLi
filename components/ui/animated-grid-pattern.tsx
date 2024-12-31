@@ -10,7 +10,7 @@ interface AnimatedGridPatternProps {
   height?: number;
   x?: number;
   y?: number;
-  strokeDasharray?: any;
+  strokeDasharray?: string | number[] | number;
   numSquares?: number;
   className?: string;
   maxOpacity?: number;
@@ -57,9 +57,9 @@ export default function AnimatedGridPattern({
       currentSquares.map((sq) =>
         sq.id === id
           ? {
-              ...sq,
-              pos: getPos(),
-            }
+            ...sq,
+            pos: getPos(),
+          }
           : sq,
       ),
     );
@@ -75,7 +75,7 @@ export default function AnimatedGridPattern({
   // Resize observer to update container dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setDimensions({
           width: entry.contentRect.width,
           height: entry.contentRect.height,
@@ -116,7 +116,7 @@ export default function AnimatedGridPattern({
           <path
             d={`M.5 ${height}V.5H${width}`}
             fill="none"
-            strokeDasharray={strokeDasharray}
+            strokeDasharray={Array.isArray(strokeDasharray) ? strokeDasharray.join(",") : strokeDasharray}
           />
         </pattern>
       </defs>

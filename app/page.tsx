@@ -1,6 +1,7 @@
 import MorphingText from "@/components/ui/morphing-text";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -24,10 +25,12 @@ export default function Home() {
                     `inline-flex items-center animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
                   )}
                 >
-                  <img
+                  <Image
                     src="/icons/gitIcon.svg"
                     alt="GitHub"
-                    className="w-5 h-5 mr-2" // Adjust size and spacing as needed
+                    width={20}
+                    height={20}
+                    className="mr-2" // Adjust spacing as needed
                   />
                   Github
                 </span>
