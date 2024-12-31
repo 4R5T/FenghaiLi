@@ -5,7 +5,6 @@ import TypingAnimation from "@/components/ui/typing-animation";
 import Image from "next/image";
 import GitIcon from "@/app/icons/gitIcon.svg";
 import { cn } from "@/lib/utils";
-
 export default function Home() {
   return (
     <main className="relative min-h-screen flex items-center justify-center bg-gray-100 p-4">
@@ -79,7 +78,7 @@ export default function Home() {
               </AnimatedGradientText>
             </a> */}
 
-            <a href="/myweb/files/Resume_Fenghai_Li_Nov_20.pdf">
+            <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/files/Resume_Fenghai_Li_Nov_20.pdf`}>
               <AnimatedGradientText>
                 <span
                   className={cn(
